@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 37</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+
+    <script>
+        /*Uma fruteira está vendendo frutas com a seguinte tabela de preços:
+    Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de
+    morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.*/
+
+        var morango = parseFloat(prompt("Quantos quilos de morango você deseja?"));
+        var maca = parseFloat(prompt("Quantos quilos de maçã você deseja?"));
+
+        if (morango <= 5) {
+            var precoMorango = morango * 2.5;
+        } else {
+            var precoMorango = morango * 2.2;
+        }
+        if (maca <= 5) {
+            var precoMaca = maca * 1.8;
+        } else {
+            var precoMaca = maca * 1.5;
+        }
+
+        var precoTotal = precoMorango + precoMaca;
+
+        if (precoTotal <= 25) {
+            document.getElementById("troca").innerHTML = "Total a pagar: R$ " + precoTotal.toFixed(2)
+        } else {
+            var precoFinal = precoTotal * 0.9;
+            document.getElementById("troca").innerHTML = "Total a pagar: R$ " + precoFinal.toFixed(2)
+        }
+    </script>
+</body>
+
+</html>

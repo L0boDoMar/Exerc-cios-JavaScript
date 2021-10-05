@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 42</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+
+    <script>
+        /*Seja o seguinte algoritmo:
+inicio
+ler a, b, c
+se (a < b+c) e (b <a+c) e (c <a+b) então
+se (a=b) e (b=c) então
+mens  'Triângulo Equilátero'
+senão
+se (a=b) ou (b=c) ou (a=c) então
+mens  'Triângulo Isósceles'
+senão
+mens  'Triângulo Escaleno'
+fim_se
+fim_se
+senão
+mens  'Não e possível formar um triângulo'
+fim_se
+escrever mens
+fim
+Faça um teste de mesa e complete o quadro a seguir para os seguintes valores das variáveis*/
+
+        var lado1 = parseFloat(prompt("Digite o tamanho do lado 1:"));
+        var lado2 = parseFloat(prompt("Digite o tamanho do lado 2:"));
+        var lado3 = parseFloat(prompt("Digite o tamanho do lado 3:"));
+
+        if ((lado1 < lado2 + lado3) && (lado2 < lado1 + lado3) && (lado3 < lado1 + lado2)) {
+            if ((lado1 == lado2) && (lado2 == lado3)) {
+                document.getElementById("troca").innerHTML = "Triângulo Equilátero";
+            } else if ((lado1 == lado2) || (lado2 == lado3) || (lado1 == lado3)) {
+                document.getElementById("troca").innerHTML = "Triângulo Isósceles";
+            }else{
+                document.getElementById("troca").innerHTML= "Triângulo Escaleno";
+            }
+        }else{
+            document.getElementById("troca").innerHTML= "Não é possível formar um triângulo";
+        }
+    </script>
+</body>
+
+</html>

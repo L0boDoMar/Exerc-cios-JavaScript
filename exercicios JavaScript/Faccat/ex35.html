@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 35</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+
+    <script>
+        /* Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível 
+        (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente 
+        sabendo-se que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90.*/
+
+
+        var combustivel = prompt("Qual é o combustível desejado?");
+        var litros = parseFloat(prompt("Quantos litros foram colocados?"));
+
+        if (combustivel == "g") {
+            var preco = litros * 3.30;
+            if (litros <= 20) {
+                var precoFinal = preco * 0.96;
+                document.getElementById("troca").innerHTML="Valor a ser pago pelo cliente: R$"+ precoFinal.toFixed(3);
+            } else if( litros>20){
+                var precoFinal = preco * 0.94;
+                document.getElementById("troca").innerHTML="Valor a ser pago pelo cliente: R$"+ precoFinal.toFixed(3);
+            }
+        } else if (combustivel=="a"){
+            var preco = litros * 2.90;
+            if (litros <= 20) {
+                var precoFinal = preco * 0.97;
+                document.getElementById("troca").innerHTML="Valor a ser pago pelo cliente: R$"+ precoFinal.toFixed(3);
+            } else if( litros>20){
+                var precoFinal = preco * 0.95;
+                document.getElementById("troca").innerHTML="Valor a ser pago pelo cliente: R$"+ precoFinal.toFixed(3);
+            }
+        } else{
+            document.getElementById("troca").innerHTML="Combustível inválido, digite novamente";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 32</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+
+    <script>
+        /*Ler o nome de 2 times e o número de gols marcados na partida (para cada time). Escrever o nome
+do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE. */
+        var time1 = prompt("Digite o nome do primeiro time: ");
+        var gols1 = parseInt(prompt("Digite a quantidade de gols marcados:"));
+        var time2 = prompt("Digite o nome do segundo time: ");
+        var gols2 = parseInt(prompt("Digite a quantidade de gols marcados:"));
+
+        if (gols1 > gols2) {
+            document.getElementById("troca").innerHTML = time1 + " venceu o jogo pelo placar de " + gols1 + "x" +
+                gols2 + " !";
+        } else if (gols2 > gols1) {
+            document.getElementById("troca").innerHTML = time2 + " venceu o jogo pelo placar de " + gols2 + "x" +
+                gols1 + " !";
+        } else {
+            document.getElementById("troca").innerHTML = " O jogo empatou com o placar de " + gols2 + "x" + gols1 +
+                " !";
+        }
+    </script>
+</body>
+
+</html>
