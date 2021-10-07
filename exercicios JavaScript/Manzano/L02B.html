@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex L02B</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+
+    <script>
+        /*Efetuar a leitura de um valor inteiro positivo ou negativo e apresentar o número lido como sendo um
+valor positivo, ou seja, o programa deverá apresentar o módulo de um número fornecido. Lembre-se
+de verificar se o número fornecido é menor que zero; sendo, multiplique-o por -1.*/
+
+        var n1 = parseInt(prompt("Digite um valor:"));
+
+
+        if (n1 < 0) {
+
+            var modulo = n1 * (-1);
+            document.getElementById("troca").innerHTML = "O módulo do valor é: " + modulo;
+        } else {
+            document.getElementById("troca").innerHTML = "O módulo do valor é: " + n1;
+        }
+    </script>
+</body>
+
+</html>

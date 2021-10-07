@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex L02G</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+    <p id="troca2"></p>
+    <p id="troca3"></p>
+    <p id="troca4"></p>
+
+    <script>
+        /* Efetuar a leitura de quatro números inteiros e apresentar os números que são divisíveis por 2 e 3. */
+        var numero1 = parseInt(prompt("Digite o primeiro número:"));
+        var numero2 = parseInt(prompt("Digite o segundo número:"));
+        var numero3 = parseInt(prompt("Digite o terceiro número:"));
+        var numero4 = parseInt(prompt("Digite o quarto número:"));
+
+        if ((numero1 % 2 == 0) && (numero1 % 3 == 0)) {
+            document.getElementById("troca").innerHTML = numero1;
+        }
+        if ((numero2 % 2 == 0) && (numero2 % 3 == 0)) {
+            document.getElementById("troca2").innerHTML = numero2;
+        }
+        if ((numero3 % 2 == 0) && (numero3 % 3 == 0)) {
+            document.getElementById("troca3").innerHTML = numero3;
+        }
+        if ((numero4 % 2 == 0) && (numero4 % 3 == 0)) {
+            document.getElementById("troca4").innerHTML = numero4;
+        }
+    </script>
+</body>
+
+</html>

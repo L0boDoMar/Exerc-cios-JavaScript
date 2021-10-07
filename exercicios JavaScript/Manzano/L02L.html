@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex L02L</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+
+    <script>
+        /* Elaborar um programa que efetue a leitura do nome e do sexo de uma pessoa, apresentando com
+saída uma das seguintes mensagens: "Ilmo Sr.", se o sexo informado como masculino, ou a
+mensagem "Ilma Sra.", para o sexo informado como feminino. Apresente também junto da
+mensagem de saudação o nome previamente informado. */
+
+        var nome = prompt("Digite seu nome: ");
+        var sexo = prompt("Digite seu sexo ('m' ou 'f'): ");
+
+        if (sexo=="m"){
+            document.getElementById("troca").innerHTML= "Ilmo Sr. "+ nome;
+        } else if (sexo=="f"){
+            document.getElementById("troca").innerHTML= "Ilma Sra. "+ nome;
+        } else{
+            document.getElementById("troca").innerHTML= "Informe um sexo válido";
+        }
+    </script>
+</body>
+
+</html>

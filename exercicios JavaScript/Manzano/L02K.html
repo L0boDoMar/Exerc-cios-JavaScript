@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex L02K</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+
+    <script>
+        /* Elaborar um programa que efetue a leitura de um determinado valor inteiro, e efetue a sua
+apresentação, caso o valor não seja maior que três. */
+
+        var numero1 = parseInt(prompt("Digite um número:"));
+
+        if (numero1<=3){
+            document.getElementById("troca").innerHTML="O número informado foi: "+numero1;
+        } else{
+            document.getElementById("troca").innerHTML="Entre com um valor válido";
+        }
+    </script>
+</body>
+
+</html>
