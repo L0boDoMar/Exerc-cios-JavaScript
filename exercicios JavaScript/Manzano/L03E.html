@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L03E</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+    <!-- Apresentar os resultados das potências de 3, variando do expoente 0 até o expoente 15. Deve ser
+    considerado que qualquer número elevado a zero é 1, e elevado a 1 é ele próprio. Observe que
+    neste exercício não pode ser utilizado o operador de exponenciação do portuguol (^). -->
+    <script>
+
+        let cont = 1;
+        let result = "";
+        let acum = 0;
+
+        while (cont <= 15) {
+            if (acum == 0) {
+                result += "<br>" + 1;
+                acum = 1;
+            } else{
+                acum=acum*3;
+                result += "<br>" + acum;
+              
+            }
+            cont++;
+        }
+        document.getElementById("troca").innerHTML = result;
+
+
+
+    </script>
+</body>
+
+</html>

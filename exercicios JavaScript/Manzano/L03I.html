@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L03I</title>
+</head>
+
+<body>
+    <p id="troca"></p>
+    <!--Elaborar um programa que efetue a leitura de 10 valores numéricos e apresente no final o total do
+        somatório e a média aritmética dos valores lidos.-->
+    <script>
+
+        let cont = 1;
+        let result = "";
+        let acum = 0;
+
+        while (cont <= 10) {
+
+            let numeros = parseInt(prompt("Digite um número"));
+            acum = acum + numeros;
+            cont++;
+        }
+        
+        result = acum/10;
+
+        document.getElementById("troca").innerHTML = "A média dos resultados é igual a " + result;
+
+
+
+    </script>
+</body>
+
+</html>
